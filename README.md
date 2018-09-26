@@ -13,7 +13,7 @@ Other frameworks don't seem to have built in ways of adding custom views. This f
 Run the example project to see the framework in action.
 
 
-![Example]()
+![Example](https://github.com/ivanlares/LIProgressRing/blob/master/Github%20Image%20Assets/10secTimer.gif)
 
 
 ## Installation
