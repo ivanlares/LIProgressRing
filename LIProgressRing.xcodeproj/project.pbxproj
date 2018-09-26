@@ -10,6 +10,7 @@
 		EA7934A1215A99D900B2F3D8 /* LIProgressRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA793497215A99D900B2F3D8 /* LIProgressRing.framework */; };
 		EA7934A6215A99D900B2F3D8 /* LIProgressRingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7934A5215A99D900B2F3D8 /* LIProgressRingTests.swift */; };
 		EA7934A8215A99D900B2F3D8 /* LIProgressRing.h in Headers */ = {isa = PBXBuildFile; fileRef = EA79349A215A99D900B2F3D8 /* LIProgressRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7934B2215A9F8900B2F3D8 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7934B1215A9F8900B2F3D8 /* ProgressRingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		EA7934A0215A99D900B2F3D8 /* LIProgressRingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LIProgressRingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7934A5215A99D900B2F3D8 /* LIProgressRingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIProgressRingTests.swift; sourceTree = "<group>"; };
 		EA7934A7215A99D900B2F3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7934B1215A9F8900B2F3D8 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		EA793499215A99D900B2F3D8 /* LIProgressRing */ = {
 			isa = PBXGroup;
 			children = (
+				EA7934B3215AA00D00B2F3D8 /* View */,
 				EA79349A215A99D900B2F3D8 /* LIProgressRing.h */,
 				EA79349B215A99D900B2F3D8 /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				EA7934A7215A99D900B2F3D8 /* Info.plist */,
 			);
 			path = LIProgressRingTests;
+			sourceTree = "<group>";
+		};
+		EA7934B3215AA00D00B2F3D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA7934B1215A9F8900B2F3D8 /* ProgressRingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					EA793496215A99D900B2F3D8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					EA79349F215A99D900B2F3D8 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7934B2215A9F8900B2F3D8 /* ProgressRingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +352,7 @@
 		EA7934AC215A99D900B2F3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +361,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = LIProgressRing/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.laresivan.LIProgressRing;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +379,7 @@
 		EA7934AD215A99D900B2F3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -371,6 +388,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = LIProgressRing/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +405,7 @@
 		EA7934AF215A99D900B2F3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LIProgressRingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +423,7 @@
 		EA7934B0215A99D900B2F3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LIProgressRingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
